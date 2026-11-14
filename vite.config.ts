@@ -3,12 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/App-Cam/',  // <-- AGREGAR ESTO
   server: {
     port: 5173,
     open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'three', 'lucide-react'],
   },
   build: {
     target: 'esnext',
